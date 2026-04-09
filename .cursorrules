@@ -1,0 +1,20 @@
+# Personal Dashboard (Project 2)
+
+## Stack
+- Next.js App Router, TypeScript, Tailwind CSS
+- Data: browser `localStorage` via `src/lib/storage.ts` (SSR-safe helpers — no `localStorage` at module scope in Server Components)
+
+## Product context
+- Read `prd_project2_dashboard.md` for workshop scope and stretch goals
+- Read `README.md` for onboarding, build order, and suggested Cursor prompts (participants decide what they track there or in chat)
+
+## Build order (suggested)
+1. Extend the data model in `src/lib/sample-data.ts` to match what the user is tracking (see README)
+2. Add form → persist with `saveItems` / `loadItems` from Client Components or `useEffect`
+3. List/grid → then filters or status toggles
+4. Add `"use client"` only where you need browser APIs, state, or events
+
+## Conventions
+- Shared types: `DashboardItem` in `src/lib/sample-data.ts`
+- Reusable UI: `src/components/`
+- App routes and layouts: `src/app/`
